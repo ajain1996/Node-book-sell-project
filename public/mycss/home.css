@@ -1,0 +1,207 @@
+.carousel-inner img {
+    width: 100%;
+    height: 500px;
+}
+.h {
+    font-size: 30px;
+    font-weight: 400;
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 2px;
+    border-radius: .5rem;
+}
+
+.hero-section {
+    padding-top: 100px;
+}
+
+.ahover:hover {
+    text-decoration: none;
+}
+
+.hover img {
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    border-top: 20px solid white;
+}
+
+.hover:hover {
+    color: deepskyblue;
+    transition: 0.6s;
+}
+
+.icon i {
+    font-size: 42px;
+    color: hotpink;
+}
+
+.icon span {
+    color: mediumslateblue;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.awesome {
+    color: darkviolet;
+    font-size: 47px;
+    font-weight: normal;
+}
+
+.line-shape {
+    width: 120px;
+    height: 4px;
+    background-color: #fb397d;
+    margin-top: 15px;
+}
+
+/* ============================================================================================================ */
+
+.special h2 {
+    font-size: 50px;
+    color: blue;
+}
+
+.google {
+    border: 1px solid silver;
+    padding: 6px 4px;
+    border-radius: 30px 0 30px 0;
+}
+.google:hover {
+    background-color: orangered;
+    color: white;
+    transition: 0.5s;
+}
+.google i{
+    font-size: 28px;
+}
+.google span{
+    font-size: 14px;
+}
+
+.apple {
+    border: 1px solid silver;
+    padding: 6px 4px;
+    border-radius: 30px 25px 25px 0px;
+}
+.apple:hover {
+    background-color: blueviolet;
+    color: white;
+    transition: 0.5s;
+}
+.apple i {
+    font-size: 28px;
+    margin-bottom: 
+}
+.apple span{
+    font-size: 14px;
+}
+
+/* ============================================================================================================ */
+
+@media (max-width: 470.98px)
+{
+   .display {
+        font-size: 30px;
+    }
+    .h {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: 240px;
+    }
+    .set-bg {
+        height: 220px;
+    }
+    .hero-section {
+        padding-top: 0px;
+    }
+    .set-bg .btn {
+        padding: 5px 15px;
+        border-radius: 0;
+        margin: 2px;
+    }
+}
+@media(min-width: 480px) and (max-width: 575.98px){
+    .display {
+        font-size: 40px;
+    }
+    .h {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: 280px;
+    }
+    .set-bg .btn {
+        padding: 8px 25px;
+        border-radius: 0;
+        margin: 4px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .display {
+        font-size: 50px;
+    }
+    .h {
+        font-size: 24px;
+        font-weight: 400;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: 320px;
+    }
+    .set-bg .btn {
+        padding: 9px 25px;
+        border-radius: 0;
+        margin: 4px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .display {
+        font-size: 70px;
+    }
+    .h {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: 440px;
+    }
+    .set-bg .btn {
+        padding: 9px 30px;
+        border-radius: 0;
+        margin: 4px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .display {
+        font-size: 65px;
+        letter-spacing: 2px;
+        color: white;
+    }
+    .set-bg .btn {
+        padding: 10px 45px;
+        border-radius: 0;
+        margin: 4px;
+    }
+    .display:hover {
+        text-decoration: none;
+    }
+    .h {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: 500px;
+    }
+}

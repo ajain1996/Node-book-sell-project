@@ -1,0 +1,332 @@
+<% include ../partials/header %>
+
+<style>
+    .a:hover {
+        text-decoration: none;
+    }
+    .hover1 {
+        border-radius: 0px;
+    } /* rgba(0, 0, 0, 0.589) */
+    .hover1:hover {
+        box-shadow: 0px 4px 0px 0px green;
+        transition: 0.5s;
+    }
+    .hover1 img {
+        border-left: 20px solid white;
+        border-right: 20px solid white;
+        border-top: 20px solid white;
+    }
+    .hover1 .p {
+        margin-bottom: -21px;
+    }
+    .boards {
+        font-size: 12px;
+    }
+    .pointer {
+        cursor: pointer;
+        margin: -1px 0;
+    }
+</style>
+<script>
+    function board() {
+      var x = document.getElementById("board");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function graduation() {
+      var x = document.getElementById("graduation");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function postGraduation() {
+      var x = document.getElementById("postGraduation");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function government() {
+      var x = document.getElementById("government");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    
+    function competitive() {
+      var x = document.getElementById("competitive");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+</script>
+
+<div class="container-fluid mt-4">
+    <div class="breadcrumb">
+        <div class="breadcrumb-item">
+            <a href="/" class="text-muted">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </div>
+        <div class="breadcrumb-item">
+            <a href="/sell" class="text-muted">Sell</a>
+        </div>
+        <li class="breadcrumb-item active"> School</li>
+    </div>
+</div>
+
+<section class="p-3 pr-4" style="font-family: 'Bree Serif';">
+    <div class="row">
+        <div class="col-md-2 col-lg-2 col-12">
+            <ul class="list-group">
+                <li class="list-group-item h5 dropdown">
+                    <div class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filter
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Sort by price</a>
+                        <a class="dropdown-item" href="#">Sort by Author</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Sort by publication</a>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5 class="pointer" onclick="board()">Board</h5>
+                    <ul id="board" class="nav flex-column" style="display: none;">
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    CBSE
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    ICSE
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    A.P Board
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    Bihar board
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    Haryana board
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    H.P board
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    Karnataka board
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    M.P board
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    Tamil Nadu
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    Telangana board
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropright">
+                                <button type="button" class="btn btn-link text-dark dropdown-toggle boards" data-toggle="dropdown">
+                                    U.P board
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <!-- <h4>Graduation</h4> -->
+                    <div onclick="graduation()">
+                        <h5 class="pointer">Graduation</h5>
+                    </div>
+                    <ul id="graduation" style="display: none;">
+                        <a class="list-group text-dark"> IIT JEE mains </a>
+                        <a class="list-group text-dark" href="#">IIT JEE Advance</a>
+                        <a class="list-group text-dark" href="#">Engineering</a>
+                        <a class="list-group text-dark" href="#">Medical</a>
+                        <a class="list-group text-dark" href="#">Commerce</a>
+                        <a class="list-group text-dark" href="#">Arts</a>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <div onclick="postGraduation()">
+                        <h5 class="pointer">Post Graduation</h5>
+                    </div>
+                    <ul id="postGraduation" style="display: none;">
+                        <a class="list-group text-dark" href="#">Engineering</a>
+                        <a class="list-group text-dark" href="#">Medical</a>
+                        <a class="list-group text-dark" href="#">Commerce</a>
+                        <a class="list-group text-dark" href="#">Arts</a>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <!-- <h4>Government</h4> -->
+                    <div onclick="government()">
+                        <h5 class="pointer">Government</h5>
+                    </div>
+                    <ul id="government" style="display: none;">
+                        <a class="list-group text-dark" href="#">Civil Services</a>
+                        <a class="list-group text-dark" href="#">UPPSC</a>
+                        <a class="list-group text-dark" href="#">Bank</a>
+                        <a class="list-group text-dark" href="#">IAS</a>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <!-- <h4>Government</h4> -->
+                    <div onclick="competitive()">
+                        <h5 class="pointer">Competitive</h5>
+                    </div>
+                    <ul id="competitive" style="display: none;">
+                        <a class="list-group text-dark" href="#">JEE mains</a>
+                        <a class="list-group text-dark" href="#">JEE Advance</a>
+                        <a class="list-group text-dark" href="#">GATE</a>
+                        <a class="list-group text-dark" href="#">AIEEE</a>
+                        <a class="list-group text-dark" href="#">AIIMS</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10 col-lg-10 col-12 card">
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5>Sell Books</h5>
+                        <a href="/sell/new" class="btn btn-light btn-sm">Add New Book</a>
+                    </div>
+                    <div class="col-md-10 mt-2">
+                        <form action="/sell" method="get" class="form-inline">
+                            <input type="search" placeholder="Search" name="search" class="search px-4 py-2 col-md-11 col-10">
+                            <button class="btn btn-outline-danger search-icon">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <% for(var i = 0; i < sellData.length; i++){ %>
+                    <div class="col-md-3 col-sm-12 col-12 my-3">
+                        <a href="/sell/<%= sellData[i]._id %>" class="a">
+                            <div class="card hover1">
+                                <img class="card-img-top" src="<%= sellData[i].image %>" height="320px">
+                                <div class="card-body text-dark">
+                                    <h6 class="mb-3"><%= sellData[i].title %></h6>
+                                    <p class="p">Price: <%= sellData[i].sellingPrice %></p><br>
+                                    <p>Original Price: <%= sellData[i].originalPrice %></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<% include ../partials/footer %>

@@ -1,0 +1,240 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.08/js/all/js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myDIV");
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
+        </script>
+        <style>
+            .sell {
+                font-size: 12px;
+            }
+            .rent {
+                font-size: 12px;
+                color: rgb(245, 245, 7);
+            }
+            .purchase {
+                font-size: 12px;
+                color: green;
+            }
+            .head {
+                margin-top: -8px;
+                margin-bottom: -2px;
+            }
+            .login, .signup, .logout {
+                border-radius: 0px;
+                width: 80px;
+            }
+            .bottom {
+                margin-bottom: -10px;
+            }
+            .navbar-brand {
+                margin: -2px;
+            }
+            .search {
+                border: 1px solid silver;
+                border-right: 0px;
+            }
+            .search-icon {
+                border-radius: 0px;
+                padding: 12px 20px;
+                border: 1px solid silver;
+                border-left: 0px;
+                color: rgb(39, 38, 38);
+            }
+            .search-icon:hover {
+                color: white;
+            }
+            @media(max-width: 479px) {
+                .bottom {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                .login, .signup, .logout {
+                    width: 100%;
+                }
+            }
+        </style>
+        <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <!--<link rel="stylesheet" href="mycss/header.css">-->
+    </head>
+    <body class="bg-light" style="font-family: 'Adamina';">
+        <section class="p-3 bg-primary">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 bottom">
+                        <i class="fas fa-phone"></i> (617)-555-5555
+                    </div>
+                    <div class="col-md-4 bottom">
+                        <i class="fas fa-envelope-open"></i> contact@btrealestate.co
+                    </div>
+                    <div class="col-md-4 bottom">
+                        <div class="social">
+                            <a href="#">
+                                <i class="fab fa-twitter text mx-1"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-facebook text mx-1"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin text mx-1"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram text mx-1"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-pinterest text mx-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand text-body mr-4 px-2 shadow" href="/">
+                    <strong class="text-dark">Book</strong> <span class="text-warning">SMart</span>
+
+                    <p class="h6 head">
+                        <span class="sell">Sell</span>.<span class="rent">Rent</span>.<span class="purchase">Purchase</span>
+                    </p>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-light btn-block text-left" href="/school">School</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-light btn-block text-left" href="/graduation">Graduation</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle btn btn-light btn-block text-left" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Competitive Exams
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/competitive-exams/iit-jee">
+                                    IIT-JEE(Indian Institute of Technology)
+                                </a>
+                                <a class="dropdown-item" href="/competitive-exams/indian-engineering-services">IES(Indian Engineering Services)</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/competitive-exams/gate">
+                                    GATE(Graduate appitude test for Engineering)
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-light dropdown-toggle btn-block text-left" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Government Exams
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/government-exams/upsc">
+                                    UPSC(Union Public Service Commission)
+                                </a>
+                                <a class="dropdown-item" href="/government-exams/mppsc">
+                                    MPPSC(Madhya Pradesh Public Service Commission)
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/government-exams/psc">
+                                    PSC(Public Service Commission)
+                                </a>
+                                <a class="dropdown-item" href="/government-exams/ssc">
+                                    SSC(Staff Selection Commission)
+                                </a>
+                                <a class="dropdown-item" href="/government-exams/ias">
+                                    IAS(Indian Administrative Services)
+                                </a>
+                                <a class="dropdown-item" href="/government-exams/railway">
+                                    Railway
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-light dropdown-toggle btn-block text-left" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Others
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/suspence">
+                                    Suspence
+                                </a>
+                                <a class="dropdown-item" href="/horror">Horror</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/thriller">
+                                    Thriller
+                                </a>
+                                <a class="dropdown-item" href="/romance">
+                                    Romance
+                                </a>
+                                <a class="dropdown-item" href="/drama">
+                                    Drama
+                                </a>
+                                <a class="dropdown-item" href="/non-fiction">
+                                    NonFiction
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <% if(!currentUser){ %>
+                        <li class="nav-item dropdown bottom">
+                            <a class="login btn btn-light mr-3 dropdown-toggle btn-block text-left" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                More
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/about">About</a>
+                                <a class="dropdown-item" href="/sell/new">Add Book</a>
+                            </div>
+                        </li>
+                        <li class="nav-item bottom">
+                            <a class="login btn btn-outline-info mx-1 btn-block" href="/login"> Login </a>
+                        </li>
+                        <li class="nav-item bottom">
+                            <a class="signup btn btn-danger mx-1 btn-block" href="/register">Sign up</a>
+                        </li>
+                        <% } else { %>
+                        <li class="nav-item bottom">
+                            <a class="btn btn-outline-danger mr-3 logout btn-block" href="/logout">Logout</a>
+                        </li>
+                        <li class="nav-item dropdown bottom">
+                            <a class="btn btn-outline-info mr-3 logout dropdown-toggle btn-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                More
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/user/profile">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/about">About</a>
+                                <a class="dropdown-item" href="/sell/new">Add Book</a>
+                            </div>
+                        </li>
+                        <% } %>
+                        <li class="nav-item bottom">
+                            <a class="nav-link ml-2 h5" href="#">
+                                <i class="fas fa-shopping-cart" style="font-size: 27px;margin-top: -6px"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>

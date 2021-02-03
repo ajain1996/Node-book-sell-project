@@ -1,0 +1,77 @@
+<% include ../partials/header %>
+
+<style>
+    label {
+        font-weight: bold;
+    }
+</style>
+
+<div class="list-group container">
+    <div class="list-group-item active mt-3">
+        <h5 style="margin: -5px 0;">Add Book</h5>
+    </div>
+    <div class="list-group-item">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="/sell" method="post">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" name="sell[title]" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <select name="sell[genre]" class="form-control">
+                            <option value="School">School</option>
+                            <option value="GATE">GATE</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Post Graduation">Post Graduation</option>
+                            <option value="IIT-JEE">IIT-JEE</option>
+                            <option value="IES">IES</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+                            <option value="Machine Learning">Machine Learning</option>
+                            <option value="Deep Learning">Deep Learning</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Romance">Romance</option>
+                            <option value="NonFiction">NonFiction</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Author</label>
+                        <input type="text" class="form-control" name="sell[author_name]" placeholder="Author name">
+                    </div>
+                    <div class="form-group">
+                        <label>Publisher</label>
+                        <input type="text" class="form-control" name="sell[publisher]" placeholder="Publisher">
+                    </div>
+                    <div class="form-group">
+                        <label>Pages</label>
+                        <input type="text" class="form-control" name="sell[pages]" placeholder="Pages">
+                    </div>
+                    <div class="form-group">
+                        <label>Selling Price</label>
+                        <input type="text" class="form-control" name="sell[sellingPrice]" placeholder="Selling Price">
+                    </div>
+                    <div class="form-group">
+                        <label>Original Price</label>
+                        <input type="text" class="form-control" name="sell[originalPrice]" placeholder="Original Price">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" name="sell[description]" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL</label>
+                        <input type="text" class="form-control" name="sell[image]" placeholder="Image URL">
+                    </div>
+
+                    <button type="submit" class="btn btn-danger">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

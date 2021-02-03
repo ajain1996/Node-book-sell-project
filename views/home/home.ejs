@@ -1,0 +1,235 @@
+<% include ../partials/header %>
+<link rel="stylesheet" href="mycss/home.css">
+<link href="https://fonts.googleapis.com/css?family=Tangerine">
+
+<style>
+    .set-bg {
+        background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('img/video.jpg');
+        width: 100%;
+        height: 560px;
+        padding-top: 190px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .fixed-bg {
+        background-image: url('img/background.jpg');
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    @media(max-width: 479px) {
+        .set-bg {
+            height: 240px;
+            padding-top: 110px;
+        }
+    }
+</style>
+
+<section>
+    <div class="set-bg">
+        <div class="container">
+            <div class="my-auto">
+                <h2 class="display ml-5 text-white">Sell, Rent & Purchase</h2>
+                <div class="ml-5 row mt-4">
+                    <a class="btn btn-primary btn-lg" href="/sell/new"> <b>Sell</b> </a>
+                    <a class="btn btn-success btn-lg" href="/sell"> <b>Rent</b> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================================================================== -->
+
+<div class="container">
+    <div class="row mt-5 pt-5">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <img class="img-fluid" src="img/bg-img/special.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="special">
+                <h2>Our Best<br> Propositions for You!</h2>
+                <p class="mt-4">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br>
+                    do eiusmod tempor ut labore et dolore magna aliqua. Lorem<br>
+                    ipsum dolor sit amet, consectetur adipisicing elit, sed do<br>
+                    eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad<br>
+                    minim veniam, quis nostrud exercitation ullamco.
+                </p>
+                <div class="mt-5">
+                    <div class="google shadow float-left m-1">
+                        <a class="google-store btn">
+                            <i class="fab fa-android text-warning"></i>
+                            <span>available on </span><strong> Google Store</strong>
+                        </a>
+                    </div>
+                    <div class="apple shadow float-left m-1">
+                        <a class="apple-store btn">
+                            <i class="fab fa-apple text-info mx-2"></i>
+                            <span>available on </span><strong> Apple Store</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ====================================================================================================== -->
+
+<div class="my-5 fixed-bg">
+    
+</div>
+
+<!-- ====================================================================================================== -->
+
+<div class="mt-5 pt-5" style="background: white;">
+    <div class="container">
+        <div class="mb-5">
+            <h2 class="text-center awesome">Awesome Features</h2>
+            <div class="line-shape m-auto"></div>
+        </div>
+        <div class="p-3">
+            <div class="row icon">
+                <div class="col-md-4 mb-4">
+                    <h3 class="pb-2">
+                        <i class="fas fa-anchor mr-3"></i><span>Awesome Experience</span>
+                    </h3>
+                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="pb-2">
+                        <i class="fab fa-artstation mr-3"></i><span>Fast and Simple</span>
+                    </h3>
+                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="pb-2">
+                        <i class="fab fa-node-js mr-3"></i><span>Clean Code</span>
+                    </h3>
+                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="pb-2">
+                        <i class="fab fa-amazon-pay mr-3"></i><span>Perfect Design</span>
+                    </h3>
+                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="pb-2">
+                        <i class="fab fa-atlassian mr-3"></i><span>Best Industry Leader</span>
+                    </h3>
+                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="pb-2">
+                        <i class="fas fa-headphones-alt mr-3"></i><span>24/7 Online Support</span>
+                    </h3>
+                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================================================================================== -->
+
+<div class="container my-5">
+    <ol class="breadcrumb">
+        <a class="btn btn-primary px-5" href="/sell">View all</a>
+    </ol>
+    <div class="row">
+        <% for(var i = 0; i < selldata.length; i++){ %>
+        <div class="col-md-3 col-sm-12 col-12 mx-auto my-3">
+            <a href="/sell" class="ahover">
+                <div class="hover">
+                    <div class="card shadow">
+                        <img class="card-img-top" src="<%= selldata[i].image %>" height="330px">
+                        <div class="card-body">
+                            <h6><%= selldata[i].name %></h6>
+                            <div>
+                                <p>
+                                    Price: 
+                                    <%= selldata[i].sellingPrice %>
+                                </p>
+                            </div>
+                            <!--
+                            <a class="btn btn-block btn-success" href="/sell">
+                                See More
+                            </a>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% } %>
+    </div>
+</div>
+
+<!-- ========================================================================================================== -->
+<br>
+<br>
+<hr>
+<!-- ========================================================================================================== -->
+
+<div class="container">
+    <div class="container-fluid py-5">
+        <div class="text-center">
+            <h1 class="mb-5 display-4"><b>Meet our team</b></h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="shadow bg-light">
+                    <img class="card-img-top" src="img/person_1.jpg">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"><a href="#">A complete guide</a></h4>
+                        <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center bg-warning">
+                        <img class="my-2 ml-4" src="img/person_1.jpg" width="54px" height="54px" style="border-radius: 50%;">
+                        <h4 class="mx-auto">Michael Smith</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="shadow bg-light">
+                    <img class="card-img-top" src="img/person_2.jpg">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"><a href="#">Beginners guide to HTML</a></h4>
+                        <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center bg-warning">
+                        <img class="my-2 ml-4" src="img/person_2.jpg" width="54px" height="54px" style="border-radius: 50%;">
+                        <h4 class="mx-auto">Michael Smith</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="shadow bg-light">
+                    <img class="card-img-top" src="img/person_3.jpg">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"><a href="#">Advanced Photoshop</a></h4>
+                        <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center bg-warning">
+                        <img class="my-2 ml-4" src="img/person_3.jpg" width="54px" height="54px" style="border-radius: 50%;">
+                        <h4 class="mx-auto">Michael Smith</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================================================================================== -->
+
+<div class="fixed-bg"></div>
+
+<!-- ========================================================================================================== -->
+
+<% include ../partials/footer %>

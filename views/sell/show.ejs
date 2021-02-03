@@ -1,0 +1,166 @@
+<% include ../partials/header %>
+
+<style>
+    .edit {
+        font-size: 11px;
+        margin-top: -12px;
+    }
+    .delete {
+        font-size: 11px;
+        margin-top: -21px;
+        margin-left: 34px;
+    }
+    .top {
+        margin: 20px;
+        line-height: 42px;
+        padding-left: 15px;
+        height: 42px;
+        border-radius: 5px;
+    }
+</style>
+
+<div class="bg-white pt-3">
+    <div class="container">
+        <div class="top mx-auto bg-light container">
+            <p class="text-muted">
+                <a href="/" class="text-muted">Home</a> >  
+                <a href="/sell" class="text-muted">Sell</a> > 
+                <span class="text-muted"><%= sellId.title %></span>
+            </p>
+        </div>
+    </div>
+    <div class="mx-auto container">
+        <div class="my-2">
+            <div class="row">
+                <div class="col-md-5 col-12">
+                    <div class="card" style="border: none;">
+                        <img class="img-fluid" src="<%= sellId.image %>">
+                    </div>
+                </div>
+                <div class="col-md-7 col-12">
+                    <h5 class="font-weight-bold text-muted" style="font-family: sans-serif;">
+                        <%= sellId.title %>
+                    </h5>
+                    <div class="h2 mt-3" style="font-family: sans-serif;">
+                        <b>Price: <%= sellId.sellingPrice %> <i class="fas fa-rupee-sign"></i></b>
+                    </div>
+                    <div class="card mt-3">
+                        <table class="table table-hover">
+                            <tr>
+                                <li class="px-2 pt-3 text-success" style="list-style: none;">
+                                    <i class="fas fa-user mr-1"></i>
+                                    <span>Author name:</span>
+                                    <span style="margin-left: 40px;"><%= sellId.author_name %></span>
+                                </li>
+                            </tr><hr>
+                            <tr>
+                                <li class="px-2 text-success" style="list-style: none;">
+                                    <i class="fab fa-creative-commons-pd-alt mr-1"></i>
+                                    <span>publisher:</span>
+                                    <span style="margin-left: 65px;">
+                                        <%= sellId.publisher %>
+                                    </span>
+                                </li>
+                            </tr><hr>
+                            <tr>
+                                <li class="px-2 text-success" style="list-style: none;">
+                                    <i class="fab fa-artstation mr-1"></i>
+                                    <span>Genre: </span>
+                                    <span style="margin-left: 85px;"><%= sellId.genre %></span>
+                                </li>
+                            </tr><hr>
+                            <tr>
+                                <li class="px-2 text-success" style="list-style: none;">
+                                    <i class="far fa-file-word mr-1"></i>
+                                    <span class="text-success">Pages: </span>
+                                    <span style="margin-left: 92px;"><%= sellId.pages %></span>
+                                </li>
+                            </tr><hr>
+                            <tr>
+                                <li class="px-2 text-success" style="list-style: none;">
+                                    <i class="fas fa-calendar-week mr-1"></i>
+                                    <span class="text-success">Date: </span>
+                                    <span style="margin-left: 96px;"><%= sellId.create_date %></span>
+                                </li>
+                            </tr><hr>
+                            <tr>
+                                <li class="px-2 text-success" style="list-style: none;">
+                                    <i class="fab fa-product-hunt mr-1"></i>
+                                    <span class="text-success">Original Price: </span>
+                                    <span style="margin-left: 53px;"><%= sellId.originalPrice %></span> 
+                                    <i class="fas fa-rupee-sign"></i>
+                                </li>
+                            </tr><hr>
+                            <tr>
+                                <li class="px-2 pb-3 text-success" style="list-style: none;">
+                                    <i class="fas fa-user-circle mr-1"></i>
+                                    <span class="text-success">Posted by: </span>
+                                    <span style="margin-left: 65px;"><%= sellId.author.name %></span>
+                                </li>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="mt-2">
+                        <% if(currentUser && sellId.author.id.equals(currentUser._id)){ %>
+                            <form action="/sell/<%= sellId._id %>?_method=DELETE" method="post">
+                                <button class="btn btn-danger btn-sm float-left mr-1">
+                                    <i class="far fa-trash-alt py-1"></i>
+                                </button>
+                            </form>
+                            <a class="btn btn-primary btn-sm float-left mx-1" href="/sell/<%= sellId._id %>/edit">
+                                <i class="fas fa-edit py-1"></i>
+                            </a>
+                        <% } %>
+                        <a class="btn float-left btn-sm btn-light mx-1" href="/sell">
+                            <b>Go to sell page</b>
+                        </a>
+                        <a class="btn btn-warning btn-sm float-left mx-1" href="/purchase"> 
+                            <b>Purchase</b> 
+                        </a>
+                    </div><br><br>
+                    <div class="mt-2 row">
+                        <div class="col-md-6">
+                            <a class="btn btn-outline-primary btn-block btn-lg mt-1">Add to cart</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-warning btn-block btn-lg mt-1">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mx-3 mt-5"><%= sellId.description %></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-3 container mx-auto bg-light">
+        <a class="btn btn-primary btn-sm ml-1 my-2 px-4" href="/sell/<%= sellId._id %>/comments/new">
+            <b>Comment</b>
+        </a>
+        <% sellId.sellcomments.forEach(function(comment){ %>
+            <div class="mb-3">
+                <div class="bg-white px-3 pt-2">
+                    <!-- 
+                        <img src="<%= //sellId.image %>" width="35px" height="35px" style="border-radius: 50%;">
+                    -->
+                    <strong> <%= comment.author.name %> </strong>
+                    <span class="float-right"><%= comment.create_date %></span>
+                    <p> - <%= comment.text %> </p>
+                    <div class="clearfix">
+                        <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                            <a href="/sell/<%= sellId._id %>/comments/<%= comment._id %>/edit" class="btn btn-sm btn-primary edit">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <form action="/sell/<%= sellId._id %>/comments/<%= comment._id %>?_method=DELETE" method="post">
+                                <button class="btn btn-danger btn-sm delete">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
